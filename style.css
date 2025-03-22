@@ -72,7 +72,7 @@ header p {
   margin-bottom: 3rem;
 }
 .project-card {
-  background-color: #f9f9f9;
+  background-color: #b3f6ff;
   padding: 2rem;
   border-radius: 12px;
   border: 1px solid #e0e0e0;
@@ -86,14 +86,6 @@ header p {
   font-size: 1.5rem;
   padding-right: 1rem;
 }
-/* .project-gallery-wrapper {
-  flex: 1;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  gap: 1rem;
-  flex-wrap: nowrap;
-} */
 
 .project-gallery-wrapper {
   display: flex;
@@ -114,7 +106,29 @@ header p {
 }
 
 .project-gallery-wrapper img:hover {
-  transform: scale(1.5);
+  transform: scale(2);
+}
+
+.project-gallery-wrapper2 {
+  display: flex;
+  justify-content: center;   /* keeps them grouped together */
+  align-items: flex-start;
+  gap: 10rem;               /* controls spacing between images */
+  flex-wrap: nowrap;
+}
+
+.project-gallery-wrapper2 img {
+  width: 44 0px;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 1.25rem;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.project-gallery-wrapper2 img:hover {
+  transform: scale(2);
 }
 /* scale for smaller screens */
 @media (max-width: 768px) {
@@ -143,7 +157,7 @@ header p {
 }
 
 .project-gallery img:hover {
-  transform: scale(1.05);
+  transform: scale(1.2);
 }
 
 /* Responsive layout for small screens */
@@ -164,10 +178,6 @@ header p {
   }
 }
 
-
-
-
-
 /* Responsive */
 @media (max-width: 768px) {
   .project-grid {
@@ -186,7 +196,7 @@ header p {
 /* Contact Section */
 #contact {
   background: linear-gradient(to right, #e0f7fa, #f0fdfb);
-  padding: 4rem 1rem;
+  padding: 1rem 1rem;
   text-align: center;
   border-top: 2px solid #b2dfdb;
   border-bottom: 2px solid #b2dfdb;
