@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navigator.clipboard.writeText(textToCopy).then(() => {
         // Optional feedback
         this.classList.add('copied');
-        this.querySelector('span').textContent = '✅ Copied!';
+        this.querySelector('span').textContent = '📋 Copied!';
         setTimeout(() => {
           this.classList.remove('copied');
           this.querySelector('span').textContent = textToCopy;
