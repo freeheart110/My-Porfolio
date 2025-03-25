@@ -1,4 +1,3 @@
-/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +21,7 @@ body {
 .container {
   width: 100%;
   margin: auto;
-  padding: 2rem 1rem;
+  padding: 2rem;
   flex-grow: 1;
 }
 
@@ -67,31 +66,39 @@ header p {
   margin-bottom: 4rem;
   width: 100%;
   border-top: 2px solid #e0e0e0;
-  border-bottom: 2px solid #e0e0e0;
   padding: 2rem 2rem;
   margin-bottom: 3rem;
 }
 .project-card {
-  background-color: #b3f6ff;
+  background-color: #ffffff;
   padding: 2rem;
   border-radius: 12px;
   border: 1px solid #e0e0e0;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   flex-shrink: 0;
   width: 420px;
 }
-
+.project-card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); 
+}
 .project-info {
   flex: 1;
   font-size: 1.5rem;
   padding-right: 1rem;
 }
+.project-info h3 {
+  font-size: 1.8rem; 
+  font-weight: 700; 
+  color: #00796b; 
+}
 
 .project-gallery-wrapper {
   display: flex;
-  justify-content: center;   /* keeps them grouped together */
+  justify-content: center;   
   align-items: flex-start;
-  gap: 10rem;               /* controls spacing between images */
+  gap: 10rem;               
   flex-wrap: nowrap;
 }
 
@@ -130,13 +137,7 @@ header p {
 .project-gallery-wrapper2 img:hover {
   transform: scale(2);
 }
-/* scale for smaller screens */
-@media (max-width: 768px) {
-  .project-gallery-wrapper img {
-    width: 160px;
-    height: 360px;
-  }
-}
+
 .project-gallery {
   flex: 1;
   display: flex;
@@ -252,6 +253,35 @@ header p {
   color: #1b5e20;
   box-shadow: 0 6px 20px rgba(0, 128, 0, 0.2);
 }
+/* scale for smaller screens */
+@media (max-width: 768px) {
+  .project-row {
+    flex-direction: column; /* Stack card and gallery */
+    align-items: center;
+    padding: 1rem; /* Reduce padding on mobile */
+  }
+
+  .project-gallery-wrapper, .project-gallery-wrapper2 {
+    flex-direction: column; /* Stack images */
+    gap: 1rem; /* Smaller gap */
+  }
+
+  .project-gallery-wrapper img, .project-gallery-wrapper2 img {
+    width: 100%; /* Full width */
+    max-width: 300px; /* Cap the size */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .contact-cards {
+    flex-direction: column; /* Stack contact cards */
+  }
+
+  .contact-card {
+    width: 100%;
+    max-width: 300px; /* Consistent width */
+  }
+}
+
 /* Responsive for small screens */
 @media (max-width: 600px) {
   .contact-cards {
@@ -263,4 +293,21 @@ header p {
     width: 90%;
     justify-content: center;
   }
+}
+
+/* back-to-top button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #00796b;
+  color: white;
+  padding: 1rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #004d40; /* Darker teal on hover */
 }
