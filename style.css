@@ -98,7 +98,7 @@ header p {
   display: flex;
   justify-content: center;   
   align-items: flex-start;
-  gap: 10rem;               
+  gap: 5rem;               
   flex-wrap: nowrap;
 }
 
@@ -113,14 +113,14 @@ header p {
 }
 
 .project-gallery-wrapper img:hover {
-  transform: scale(2);
+  transform: scale(1.6);
 }
 
 .project-gallery-wrapper2 {
   display: flex;
   justify-content: center;   /* keeps them grouped together */
   align-items: flex-start;
-  gap: 10rem;               /* controls spacing between images */
+  gap: 5rem;               /* controls spacing between images */
   flex-wrap: nowrap;
 }
 
@@ -135,7 +135,7 @@ header p {
 }
 
 .project-gallery-wrapper2 img:hover {
-  transform: scale(2);
+  transform: scale(1.6);
 }
 
 .project-gallery {
@@ -271,7 +271,10 @@ header p {
     max-width: 300px; /* Cap the size */
     height: auto; /* Maintain aspect ratio */
   }
-
+  .arrow {
+    transform: rotate(90deg); /* Arrows point down on mobile */
+    font-size: 1.5rem;
+  }
   .contact-cards {
     flex-direction: column; /* Stack contact cards */
   }
@@ -310,4 +313,13 @@ header p {
 
 .back-to-top:hover {
   background-color: #004d40; /* Darker teal on hover */
+}
+
+/* arrow added */
+.arrow {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00796b;
+  margin: 0 1rem; /* Space between arrows and images */
+  align-self: center;
 }
