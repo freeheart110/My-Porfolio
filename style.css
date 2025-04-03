@@ -85,11 +85,11 @@ header p {
 }
 .project-info {
   flex: 1;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   padding-right: 1rem;
 }
 .project-info h3 {
-  font-size: 1.8rem; 
+  font-size: 1.5rem; 
   font-weight: 700; 
   color: #00796b; 
 }
@@ -125,9 +125,9 @@ header p {
 }
 
 .project-gallery-wrapper2 img {
-  width: 44 0px;
-  height: 460px;
-  object-fit: cover;
+  width: 320px;
+  height: 300px;
+  object-fit: fit;
   border-radius: 1.25rem;
   border: 1px solid #ccc;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
