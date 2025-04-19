@@ -122,11 +122,13 @@ header p {
 }
 
 .project-gallery-wrapper2 img {
-  width: 500px;
+  width: 450px;
   height: auto;
   object-fit: cover;
   border: 1px solid #0e0d0d;
   border-radius: 12px;
+  transition: transform 0.2s ease;
+
 }
 
 .project-gallery-wrapper2 img:hover {
